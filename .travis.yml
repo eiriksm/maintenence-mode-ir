@@ -49,7 +49,9 @@ install:
   - drush en simpletest maintenance_mode_ir -y
 
 script:
-  - phpcs --standard=$HOME/.composer/vendor/drupal/coder/coder_sniffer/Drupal build/drupal/modules
-  - cd build/drupal
+  - pwd
+  - ls -lah
+  - phpcs --standard=$HOME/.composer/vendor/drupal/coder/coder_sniffer/Drupal . 
+  - cd ..
   - php core/scripts/run-tests.sh --url $TEST_URL --class "Drupal\maintenance_mode_ir\Tests\MaintenanceControllerTest"  
 
