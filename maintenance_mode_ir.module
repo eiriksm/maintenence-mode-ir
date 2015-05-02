@@ -1,0 +1,33 @@
+<?php
+
+/**
+ * @file
+ * Contains maintenance_mode_ir.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function maintenance_mode_ir_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the maintenance_mode_ir module.
+    case 'help.page.maintenance_mode_ir':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('An endpoint for turning off your Drupal site') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function maintenance_mode_ir_theme() {
+  $theme = [];
+
+  return $theme;
+}

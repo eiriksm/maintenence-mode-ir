@@ -1,0 +1,8 @@
+maintenance_mode_ir.maintenance_controller.toggle:
+  path: '/maintenance_mode_ir'
+  defaults:
+    _controller: '\Drupal\maintenance_mode_ir\Controller\MaintenanceController::toggle'
+    _title: 'Turn on or off the site'
+  requirements:
+    _permission: 'administer site configuration'
+
