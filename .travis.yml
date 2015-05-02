@@ -52,6 +52,7 @@ script:
   - pwd
   - ls -lah
   - phpcs --standard=$HOME/.composer/vendor/drupal/coder/coder_sniffer/Drupal . 
+  - cd ..
   - which php
-  - php core/scripts/run-tests.sh --url $TEST_URL --class "Drupal\maintenance_mode_ir\Tests\MaintenanceControllerTest"  
+  - php core/scripts/run-tests.sh --php /home/travis/.phpenv/shims/php --url $TEST_URL --class "Drupal\maintenance_mode_ir\Tests\MaintenanceControllerTest"  
 
